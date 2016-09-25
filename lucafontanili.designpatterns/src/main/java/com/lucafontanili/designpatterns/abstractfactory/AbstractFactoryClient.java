@@ -1,13 +1,13 @@
 package com.lucafontanili.designpatterns.abstractfactory;
 
+import java.io.IOException;
+
+import com.lucafontanili.designpatterns.Constants;
 import com.lucafontanili.designpatterns.utilities.AbstractClient;
 
 public class AbstractFactoryClient extends AbstractClient {
 
-    private static final String MAC_OSX = "Mac OS X";
-    private static final String WINDOWS = "Windows XP";
-
-    public static void main(String[] args) throws InvalidArgumentException {
+    public static void main(String[] args) throws InvalidArgumentException, IOException {
 
 	main(new AbstractFactoryClient());
     }
@@ -16,18 +16,18 @@ public class AbstractFactoryClient extends AbstractClient {
     public void run() throws InvalidArgumentException {
 	GUIBuilder builder = new GUIBuilder();
 	AbstractWidgetFactory widgetFactory;
-	String platformOS = System.getProperty("os.name");
-	LOGGER.info("Running Client on " + platformOS + " platform");
+	String platformOS = System.getProperty(Constants.OS_NAME);
+	LOGGER.info(new StringBuilder(64).append("Running Client on ").append(platformOS).append(" platform"));
 	// check what platform we're on
 	switch (platformOS) {
-	case MAC_OSX:
+	case Constants.MAC_OSX:
 	    widgetFactory = new MacOSXWidgetFactory();
 	    break;
-	case WINDOWS:
+	case Constants.WINDOWS:
 	    widgetFactory = new MsWindowsWidgetFactory();
 	    break;
 	default:
-	    throw new InvalidArgumentException("Invalid platform");
+	    throw new InvalidArgumentException(new StringBuilder(64).append("Invalid platform").toString());
 	}
 
 	builder.buildWindow(widgetFactory);

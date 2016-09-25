@@ -1,11 +1,13 @@
 package com.lucafontanili.designpatterns.builder;
 
+import java.io.IOException;
+
 import com.lucafontanili.designpatterns.abstractfactory.InvalidArgumentException;
 import com.lucafontanili.designpatterns.utilities.AbstractClient;
 
 public class BuilderClient extends AbstractClient {
 
-    public static void main(String[] args) throws InvalidArgumentException {
+    public static void main(String[] args) throws InvalidArgumentException, IOException {
 	main(new BuilderClient());
     }
 

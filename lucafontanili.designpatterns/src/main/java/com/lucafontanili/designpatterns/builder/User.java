@@ -9,7 +9,7 @@ public class User {
     private final String phone;
     private final String address;
 
-    User(UserBuilder builder) {
+    private User(UserBuilder builder) {
 	this.firstName = builder.firstName;
 	this.lastName = builder.lastName;
 	this.age = builder.age;
@@ -76,4 +76,5 @@ public class User {
 	    return user;
 	}
     }
+
 }
