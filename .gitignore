@@ -4,6 +4,6 @@
 .metadata
 .recommenders/index/http___download_eclipse_org_recommenders_models_mars_
 .recommenders/caches
-.settings/*
-c\:/*
-target/*
+.settings
+c\:
+target
