@@ -13,7 +13,7 @@ public class SystemTrace implements TraceInterface {
 
     @Override
     public void debug(String message) {
-	if (this.debug) { // only print if debug is true
+	if (this.debug) {
 	    System.out.println("DEBUG: " + message);
 	}
     }
