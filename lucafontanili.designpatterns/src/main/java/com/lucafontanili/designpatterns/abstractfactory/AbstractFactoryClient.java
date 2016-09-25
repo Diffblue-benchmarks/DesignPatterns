@@ -1,32 +1,19 @@
 package com.lucafontanili.designpatterns.abstractfactory;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
+import com.lucafontanili.designpatterns.utilities.AbstractClient;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-
-public class Client {
+public class AbstractFactoryClient extends AbstractClient {
 
     private static final String MAC_OSX = "Mac OS X";
     private static final String WINDOWS = "Windows XP";
 
-    private static final Logger LOGGER = Logger.getRootLogger();
+    public static void main(String[] args) throws InvalidArgumentException {
 
-    static {
-	Properties props = new Properties();
-	try (InputStream is = new FileInputStream("log4j.properties")) {
-	    props.load(is);
-	    PropertyConfigurator.configure(props);
-	} catch (IOException e) {
-	    LOGGER.error("Error during properties load", e);
-	}
-
+	main(new AbstractFactoryClient());
     }
 
-    public static void main(String[] args) throws InvalidArgumentException {
+    @Override
+    public void run() throws InvalidArgumentException {
 	GUIBuilder builder = new GUIBuilder();
 	AbstractWidgetFactory widgetFactory;
 	String platformOS = System.getProperty("os.name");
