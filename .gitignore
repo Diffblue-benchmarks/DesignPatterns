@@ -1,9 +1,9 @@
 .DS_Store
-.classpath
-.project
-.metadata
+**/.classpath
+**/.project
+**/.metadata
 .recommenders/index/http___download_eclipse_org_recommenders_models_mars_
 .recommenders/caches
-.settings
-c\:
-target
+**/.settings
+**/c\:
+**/target
