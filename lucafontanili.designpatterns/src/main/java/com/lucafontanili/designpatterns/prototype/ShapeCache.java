@@ -8,6 +8,10 @@ import com.lucafontanili.designpatterns.Constants;
 public class ShapeCache {
     private static final Map<String, AbstractShape> shapeMap = new ConcurrentHashMap<>();
 
+    private ShapeCache() {
+
+    }
+
     public static void loadCache() {
 	shapeMap.put(Constants.CIRCLE, new Circle());
 	shapeMap.put(Constants.RECTANGLE, new Rectangle());

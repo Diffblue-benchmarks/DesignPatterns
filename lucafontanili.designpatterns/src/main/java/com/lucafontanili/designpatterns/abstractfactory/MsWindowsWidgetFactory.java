@@ -9,8 +9,8 @@ package com.lucafontanili.designpatterns.abstractfactory;
 public class MsWindowsWidgetFactory implements AbstractWidgetFactory {
 
     // create an MSWindow
+    @Override
     public Window createWindow() {
-	MSWindow window = new MSWindow();
-	return window;
+	return new MSWindow();
     }
 }

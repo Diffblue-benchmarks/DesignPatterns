@@ -1,6 +1,11 @@
 package com.lucafontanili.designpatterns;
 
 public class Constants {
+
+    private Constants() {
+
+    }
+
     public static final String LOG4J_PROPERTIES = "log4j.properties";
     public static final String PROPERTIES_LOAD_ERROR = new StringBuilder(32).append("Error loading properties")
 	    .toString();

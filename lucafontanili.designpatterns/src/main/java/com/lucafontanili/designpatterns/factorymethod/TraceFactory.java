@@ -7,6 +7,10 @@ import com.lucafontanili.designpatterns.abstractfactory.InvalidArgumentException
 
 public class TraceFactory {
 
+    private TraceFactory() {
+
+    }
+
     public static TraceInterface getTrace(String traceType) throws IOException, InvalidArgumentException {
 	switch (traceType) {
 	case Constants.SYSTEM_TRACE:

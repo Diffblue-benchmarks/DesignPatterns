@@ -14,7 +14,7 @@ public class SystemTrace implements TraceInterface {
     @Override
     public void debug(String message) {
 	if (this.debug) {
-	    System.out.println("DEBUG: " + message);
+	    LOGGER.debug("DEBUG: " + message);
 	}
     }
 
