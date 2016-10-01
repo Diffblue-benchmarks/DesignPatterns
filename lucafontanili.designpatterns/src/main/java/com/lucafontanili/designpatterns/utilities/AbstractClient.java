@@ -8,8 +8,6 @@ import java.util.Properties;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
-import com.lucafontanili.designpatterns.Constants;
-
 public abstract class AbstractClient {
 
     protected static final Logger LOGGER = Logger.getRootLogger();
