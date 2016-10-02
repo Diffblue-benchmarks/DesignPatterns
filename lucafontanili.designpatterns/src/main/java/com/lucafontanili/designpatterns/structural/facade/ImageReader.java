@@ -12,8 +12,7 @@ public class ImageReader {
     public static FileInputStream readImage(String imageName) throws FileNotFoundException {
 	LOGGER.info(new StringBuilder(32).append("Reading image ").append(imageName));
 	try {
-	    FileInputStream is = new FileInputStream(imageName);
-	    return is;
+	    return new FileInputStream(imageName);
 	} catch (FileNotFoundException e) {
 	    LOGGER.error(new StringBuilder(256).append("Caught exception").toString(), e);
 	    throw e;
