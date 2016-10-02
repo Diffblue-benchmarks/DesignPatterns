@@ -18,6 +18,8 @@ public class Constants {
     public static final String PDF = "pdf.xml";
     public static final String RTF = "rtf.xml";
     public static final String AUDIO_EXTENSIONS = "mp3;flac";
+    public static final String SOURCE_PATH = "/replace/with/your/own/source/path.jpg";
+    public static final String OUTPUT_PATH = "/replace/with/your/own/output/path.zip";
 
     private Constants() {
 
