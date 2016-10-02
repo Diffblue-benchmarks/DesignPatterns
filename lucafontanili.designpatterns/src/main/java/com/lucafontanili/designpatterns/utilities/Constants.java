@@ -11,6 +11,7 @@ public class Constants {
 
     public static final String MAC_OSX = "Mac OS X";
     public static final String WINDOWS = "Windows XP";
+    public static final String UBUNTU = "Ubuntu";
     public static final String OS_NAME = new StringBuilder(32).append("os.name").toString();
     public static final String CIRCLE = "circle";
     public static final String RECTANGLE = "rectangle";
