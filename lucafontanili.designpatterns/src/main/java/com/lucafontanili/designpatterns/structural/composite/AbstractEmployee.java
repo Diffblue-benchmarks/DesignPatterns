@@ -8,6 +8,10 @@ public abstract class AbstractEmployee {
     protected int salary;
     protected List<AbstractEmployee> people = new ArrayList<>();
 
+    public AbstractEmployee(String name) {
+	this.name = name;
+    }
+
     public String getName() {
 	return this.name;
     }
@@ -30,10 +34,6 @@ public abstract class AbstractEmployee {
 
     public List<AbstractEmployee> getSubordinates() {
 	return this.people;
-    }
-
-    public AbstractEmployee(String name) {
-	this.name = name;
     }
 
 }

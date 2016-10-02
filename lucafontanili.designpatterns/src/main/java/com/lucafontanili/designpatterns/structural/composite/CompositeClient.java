@@ -1,6 +1,7 @@
 package com.lucafontanili.designpatterns.structural.composite;
 
 import java.io.IOException;
+import java.util.Random;
 
 import com.lucafontanili.designpatterns.utilities.AbstractClient;
 import com.lucafontanili.designpatterns.utilities.InvalidArgumentException;
@@ -17,7 +18,7 @@ public class CompositeClient extends AbstractClient {
 	Employee employee = new Employee(new StringBuilder(16).append("Luca Fontanili").toString(),
 		new StringBuilder(16).append("Red Room").toString(),
 		new StringBuilder(16).append("Software Engineer").toString());
-	employee.setSalary((int) (Math.random() * 100));
+	employee.setSalary(new Random().nextInt(100));
 	LOGGER.info(new StringBuilder(64).append("Luca's salary: ").append(employee.getSalary()).append("k€"));
 
 	Office office = new Office(new StringBuilder("Cool Office").toString());
@@ -28,7 +29,7 @@ public class CompositeClient extends AbstractClient {
 
 	Employee employee2 = new Employee(new StringBuilder(16).append("Gimli").toString(),
 		new StringBuilder(16).append(office.getName()).toString(),
-		new StringBuilder(16).append("DigitalMarketer").toString());
+		new StringBuilder(16).append("Digital Marketer").toString());
 	employee2.setSalary(35);
 	office.add(employee1);
 	office.add(employee2);
