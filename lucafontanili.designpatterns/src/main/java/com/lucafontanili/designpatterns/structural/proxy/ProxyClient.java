@@ -16,6 +16,7 @@ public class ProxyClient extends AbstractClient {
     public void run() throws InvalidArgumentException, IOException {
 	ProxyImage image = new ProxyImage(Constants.SOURCE_PATH);
 	image.draw();
+	image.draw();
 
     }
 

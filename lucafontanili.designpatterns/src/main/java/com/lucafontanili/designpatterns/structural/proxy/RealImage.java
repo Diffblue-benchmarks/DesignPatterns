@@ -6,6 +6,12 @@ class RealImage implements ImageInterface {
 
     RealImage(String fileName) {
 	this.fileName = fileName;
+	load(this.fileName);
+    }
+
+    private void load(String fileName2) {
+	logger.info(new StringBuilder(32).append("Loading image from disk"));
+
     }
 
     @Override
