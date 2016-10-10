@@ -28,12 +28,16 @@ public class WidgetMediator {
     }
 
     void buttonClicked(Button button) {
+	if (!button.getEnabled()) {
+	    LOGGER.warn(new StringBuilder(32).append("Button disabled, please enter some text"));
+	    return;
+	}
 	this.textBox.clearText();
 	this.button.setEnabled(false);
 	LOGGER.info(new StringBuilder(32).append("Text cleared"));
     }
 
-    public void enteredValidText(TextBox textBox) {
+    public void enteredText(TextBox textBox) {
 	if (!textBox.getMessage().isEmpty()) {
 	    this.button.setEnabled(true);
 	    LOGGER.info(new StringBuilder(32).append("Entered: ").append(textBox.getMessage()));

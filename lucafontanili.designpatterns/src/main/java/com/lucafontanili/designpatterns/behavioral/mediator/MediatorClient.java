@@ -16,9 +16,9 @@ public class MediatorClient extends AbstractClient {
 	Button button = new Button();
 	TextBox textBox = new TextBox();
 
-	button.clearText();
-	textBox.enterText("Hi!");
-	button.clearText();
+	button.click();
+	textBox.enterText(new StringBuilder(8).append("Hi!").toString());
+	button.click();
 
     }
 

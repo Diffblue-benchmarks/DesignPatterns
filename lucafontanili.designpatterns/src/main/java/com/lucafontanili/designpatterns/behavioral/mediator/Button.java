@@ -9,20 +9,17 @@ public class Button extends AbstractWidget {
 	this.mediator.setButton(this);
     }
 
-    public void clearText() {
-	if (!getEnabled()) {
-	    LOGGER.warn(new StringBuilder(32).append("Button disabled, please enter some text"));
-	    return;
-	}
+    public void click() {
+
 	this.mediator.buttonClicked(this);
     }
 
-    public void setEnabled(boolean enabled) {
+    void setEnabled(boolean enabled) {
 	this.enabled = enabled;
 
     }
 
-    public boolean getEnabled() {
+    boolean getEnabled() {
 	return this.enabled;
 
     }

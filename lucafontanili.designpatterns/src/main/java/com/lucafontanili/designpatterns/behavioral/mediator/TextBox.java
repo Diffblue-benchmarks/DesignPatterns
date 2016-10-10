@@ -10,7 +10,7 @@ public class TextBox extends AbstractWidget {
 
     public void enterText(String message) {
 	this.message = message;
-	this.mediator.enteredValidText(this);
+	this.mediator.enteredText(this);
     }
 
     public void clearText() {
