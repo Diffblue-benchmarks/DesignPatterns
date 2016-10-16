@@ -6,5 +6,5 @@ abstract class AbstractObserver {
     protected static final Logger LOGGER = Logger.getRootLogger();
     protected static final String DASH = "-";
 
-    abstract void update(ClockTimer timer);
+    abstract void update(AbstractClockTimer timer);
 }
