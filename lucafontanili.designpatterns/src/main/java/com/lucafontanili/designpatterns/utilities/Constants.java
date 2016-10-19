@@ -20,6 +20,8 @@ public class Constants {
     public static final String AUDIO_EXTENSIONS = "mp3;flac";
     public static final String SOURCE_PATH = "/replace/with/your/own/source/path.jpg";
     public static final String OUTPUT_PATH = "/replace/with/your/own/output/path.zip";
+    public static final String MKV_EXTENSION = ".mkv";
+    public static final String FLAC_EXTENSION = ".flac";
 
     private Constants() {
 
