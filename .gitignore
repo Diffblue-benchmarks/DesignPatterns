@@ -9,3 +9,5 @@
 **/target
 **/.sonar
 **/sonar-project.properties
+**/.pydevproject
+**/__init__.py
