@@ -17,4 +17,13 @@ After reading [Design Patterns](https://en.wikipedia.org/wiki/Design_Patterns) b
 
 - This is pretty similar to the previous one: again you'll find a Client module in each package, that you need to execute in order to see live the behavior of the pattern
 
+## Techs 'n Tools
+
+For this project the following programming languages, IDEs and tools have been used:
+- Java 8
+- Python 2.7.10
+- Eclipse Neon (JavaEE)
+- PyDev plugin for Eclipse
+- SonarQube
+
 **Have fun**
