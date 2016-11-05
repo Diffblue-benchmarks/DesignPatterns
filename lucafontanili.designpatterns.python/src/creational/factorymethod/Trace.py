@@ -9,7 +9,7 @@ import logging
 class TraceClass(object):
     
     def __init__(self):
-        logging.basicConfig(filename='../../log.log',level=logging.DEBUG)
+        logging.basicConfig(filename='../../../log.log',level=logging.DEBUG)
         self.debug = False
     
     def set_debug(self, debug):
