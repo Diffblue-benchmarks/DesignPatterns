@@ -20,10 +20,8 @@ After reading [Design Patterns](https://en.wikipedia.org/wiki/Design_Patterns) b
 ## Techs 'n Tools
 
 For this project the following programming languages, IDEs and tools have been used:
-- Java 8
-- Python 2.7.10
-- Eclipse Neon (JavaEE)
-- PyDev plugin for Eclipse
-- SonarQube
+- **Programming Languages**: Java 8 / Python 2.7.10
+- **IDEs**: Eclipse Neon (JavaEE) and PyDev plugin
+- **Quality Management**: SonarQube
 
-**Have fun**
+## Have fun
