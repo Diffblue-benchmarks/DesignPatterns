@@ -3,9 +3,13 @@ Created on Nov 3, 2016
 
 @author: Admin
 '''
+
+import logging
+
 class TraceClass(object):
     
     def __init__(self):
+        logging.basicConfig(filename='../../log.log',level=logging.DEBUG)
         self.debug = False
     
     def set_debug(self, debug):
@@ -16,10 +20,10 @@ class FileTrace(TraceClass):
         
     def debug(self, message):
          if self.debug is True:
-             print 'DEBUG on file: ', message
+             logging.debug('DEBUG:' + message)
     
     def error(self, message):
-         print 'ERROR on file: ', message
+        logging.error('ERROR: ' + message)
          
          
             
