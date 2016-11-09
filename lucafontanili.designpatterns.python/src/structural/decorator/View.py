@@ -3,7 +3,6 @@ Created on Nov 6, 2016
 
 @author: Admin
 '''
-from idlelib.textView import view_file
 
 class ViewClass(object):
     
