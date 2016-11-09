@@ -9,8 +9,8 @@ class RealImage implements ImageInterface {
 	load(this.fileName);
     }
 
-    private void load(String fileName2) {
-	logger.info(new StringBuilder(32).append("Loading image from disk"));
+    private void load(String fileName) {
+	logger.info(new StringBuilder(32).append("Loading image from disk ").append(fileName));
 
     }
 
