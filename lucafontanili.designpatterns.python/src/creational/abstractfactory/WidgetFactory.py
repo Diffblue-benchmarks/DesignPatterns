@@ -7,13 +7,15 @@ Created on Nov 3, 2016
 from Window import *
 class MSWindowWidgetFactory:
 
-    def make_diagram(self, width, height):
+    @staticmethod
+    def make_diagram(width, height):
         return MSWindow()
     
 
 class MacOSXWindowWidgetFactory:
 
-    def make_diagram(self, width, height):
+    @staticmethod
+    def make_diagram(width, height):
         return MacOSXWindow()
 
    

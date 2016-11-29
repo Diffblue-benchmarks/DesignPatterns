@@ -15,7 +15,8 @@ class EquipmentVisitor:
     def visit_chassis(self, chassis):
         pass
     
-    def visit_computer_component(self, computer_equipment):
+    @staticmethod
+    def visit_computer_component(computer_equipment):
         print('Added ' + computer_equipment.name())
         
 class FloppyDiskVisitor(EquipmentVisitor):

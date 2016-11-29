@@ -11,13 +11,15 @@ class ViewClass(object):
     
 class ImageView(ViewClass):
     
-    def draw(self):
+    @staticmethod
+    def draw():
         print('Creating an ImageView')
         
 
 class TextView(ViewClass):
     
-    def draw(self):
+    @staticmethod
+    def draw():
         print('Creating an TextView')
         
 class ViewDecorator(ViewClass):
@@ -36,5 +38,6 @@ class BorderDecorator(ViewDecorator):
         super(BorderDecorator, self).draw()
         self.draw_border()
         
-    def draw_border(self):
+    @staticmethod
+    def draw_border():
         print('Adding border to the view')

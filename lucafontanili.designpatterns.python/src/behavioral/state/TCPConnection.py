@@ -12,8 +12,9 @@ class TCPState(object):
     def execute(self, tcp_state):
         pass
         
+    @staticmethod
     @abstractmethod
-    def doOperation(self, state):
+    def do_operation(state):
         pass
 
         
@@ -23,11 +24,12 @@ class TCPStateClose(TCPState):
     def execute(self, tcp_state):
         return self.doOperation(tcp_state)
     
-    def doOperation(self, state):
+    @staticmethod
+    def do_operation(state):
         if state is states['establish']:
-            print 'Connection closed'
+            print('Connection closed')
         else:
-            print 'Cannot close an non-established connectionCannot close an non-established connection'
+            print('Cannot close an non-established connectionCannot close an non-established connection')
         return state == states['establish']
     
 class TCPStateOpen(TCPState):
@@ -36,11 +38,12 @@ class TCPStateOpen(TCPState):
     def execute(self, tcp_state):
         return self.doOperation(tcp_state)
     
-    def doOperation(self, state):
+    @staticmethod
+    def do_operation(state):
         if state is states['empty']:
-            print 'Connection opened'
+            print('Connection opened')
         else:
-            print 'Cannot open a non-empty connection'
+            print('Cannot open a non-empty connection')
         return state == states['empty']
     
 class TCPStateEstablish(TCPState):
@@ -49,11 +52,12 @@ class TCPStateEstablish(TCPState):
     def execute(self, tcp_state):
         return self.doOperation(tcp_state)
     
-    def doOperation(self, state):
+    @staticmethod
+    def do_operation(state):
         if state is states['open']:
-            print 'Connection established'
+            print('Connection established')
         else:
-            print 'Cannot establish a non-opened connection'
+            print('Cannot establish a non-opened connection')
         return state == states['open']
 
 class TCPConnectionClass:

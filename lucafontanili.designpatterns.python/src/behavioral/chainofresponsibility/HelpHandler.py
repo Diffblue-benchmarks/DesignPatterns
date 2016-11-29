@@ -28,16 +28,19 @@ class HelpHandlerClass:
         
 class ApplicationHelpHandler(HelpHandlerClass):
     
-    def show_help_message(self):
+    @staticmethod
+    def show_help_message():
         print("Application's general help message")
         
 class ButtonHelpHandler(HelpHandlerClass):
     
-    def show_help_message(self):
+    @staticmethod
+    def show_help_message():
         print('This is a button')
         
 class PrintButtonHelpHandler(HelpHandlerClass):
     
-    def show_help_message(self):
+    @staticmethod
+    def show_help_message():
         print('This is a print button, hit it if you want to print your document')
     

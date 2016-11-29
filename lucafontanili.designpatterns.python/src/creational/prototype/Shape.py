@@ -10,7 +10,8 @@ class ShapeClass:
     
     _id = None
     
-    def draw(self):
+    @staticmethod
+    def draw():
         pass
     
     def clone(self):
@@ -25,8 +26,9 @@ class Circle(ShapeClass):
     def __init__(self, id):
         self._id = id
         
-    def draw(self):
-        print 'Drawing a Cricle'
+    @staticmethod
+    def draw():
+        print('Drawing a Cricle')
     
     def clone(self):
         return copy.copy(self)
@@ -37,8 +39,9 @@ class Rectangle(ShapeClass):
     def __init__(self, id):
         self._id = id
         
-    def draw(self):
-        print 'Drawing a Rectangle'
+    @staticmethod
+    def draw():
+        print('Drawing a Rectangle')
     
     def clone(self):
         return copy.copy(self)

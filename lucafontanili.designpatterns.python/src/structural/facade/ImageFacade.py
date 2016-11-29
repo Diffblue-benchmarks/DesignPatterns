@@ -26,5 +26,6 @@ class ImageFacadeClass:
             cls._instances[cls] = super(ImageFacadeClass, cls).__new__(cls, *args, **kwargs)
         return cls._instances[cls]
     
-    def zip_image(self, image_name, ouptut_file):
+    @staticmethod
+    def zip_image(image_name, ouptut_file):
         ImageCompressor.compress_image(ImageReader.read_image(image_name), ouptut_file)

@@ -32,18 +32,21 @@ class ClockTimer:
         
 class ObserverClass:
     
+    @staticmethod
     @abstractmethod
-    def update(self, timer):
+    def update(timer):
         pass
 
 class ClockObserver12(ObserverClass):
     
-    def update(self, timer):
+    @staticmethod
+    def update(timer):
         print(str(12 if timer.hour() % 12 == 0 else timer.hour() % 12) + '-' + 
               str(timer.minute()) + '-' + str(timer.second()) + 
               (' PM' if timer.hour()/12 == 1 else ' AM'))
         
 class ClockObserver24(ObserverClass):
     
-    def update(self, timer):
+    @staticmethod
+    def update(timer):
         print(str(timer.hour()) + '-'  + str(timer.minute()) + '-' + str(timer.second()))

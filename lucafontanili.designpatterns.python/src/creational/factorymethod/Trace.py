@@ -19,10 +19,11 @@ class TraceClass(object):
 class FileTrace(TraceClass):
         
     def debug(self, message):
-         if self.debug is True:
-             logging.debug('DEBUG:' + message)
+        if self.debug is True:
+            logging.debug('DEBUG:' + message)
     
-    def error(self, message):
+    @staticmethod
+    def error(message):
         logging.error('ERROR: ' + message)
          
          
@@ -31,9 +32,9 @@ class FileTrace(TraceClass):
 class SystemTrace(TraceClass):
         
     def debug(self, message):
-         if self.debug is True:
-             print 'DEBUG on system: ', message
+        if self.debug is True:
+            print('DEBUG on system: ', message)
          
-         
-    def error(self, message):
-         print 'ERROR on system: ', message
+    @staticmethod
+    def error(message):
+        print('ERROR on system: ', message)

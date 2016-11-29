@@ -5,15 +5,18 @@ Created on Nov 5, 2016
 '''
 class WindowClass:
     
-    def create_window(self):
+    @staticmethod
+    def create_window():
         pass
     
 class UbuntuWindow(WindowClass):
     
-    def create_window(self):
+    @staticmethod
+    def create_window():
         print('Creating an Ubuntu window')
         
 class MacOSXWindow(WindowClass):
     
-    def create_window(self):
+    @staticmethod
+    def create_window():
         print('Creating an MacOSX window')

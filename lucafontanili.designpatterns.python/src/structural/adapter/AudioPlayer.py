@@ -5,5 +5,6 @@ Created on Nov 5, 2016
 '''
 class AudioPlayerClass:
     
-    def playSong(self, title):
+    @staticmethod
+    def play_song(title):
         print('Playing track: ' + title)

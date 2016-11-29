@@ -9,18 +9,21 @@ payment_methods = {'paypal': 0, 'credit_card':1}
 
 class PaymentMethod:
     
+    @staticmethod
     @abstractmethod
-    def pay(self, payment_account, price):
+    def pay(payment_account, price):
         pass
     
 class PayPalPaymentMethod(PaymentMethod):
     
-    def pay(self, payment_account, price):
+    @staticmethod
+    def pay(payment_account, price):
         print('Paying $' + str(price) + ' with PayPal account ' + payment_account)
         
 class CreditCardPaymentMethod(PaymentMethod):
     
-    def pay(self, payment_account, price):
+    @staticmethod
+    def pay(payment_account, price):
         print('Paying $' + str(price) + ' with credit card ' + payment_account)
 
 class PaymentMethodFactory:

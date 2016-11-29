@@ -17,8 +17,9 @@ class Media(object):
     def file_name(self):
         return self._file_name
     
+    @staticmethod
     @abstractmethod
-    def open_player(self):
+    def open_player():
         pass
     
     def play(self):
@@ -33,7 +34,8 @@ class VideoFile(Media):
     def __init__(self, file_name):
         super(VideoFile, self).__init__(file_name, '.mkv')
         
-    def open_player(self):
+    @staticmethod
+    def open_player():
         print('Opening VLC')
 
         
@@ -43,6 +45,7 @@ class AudioFile(Media):
     def __init__(self, file_name):
         super(AudioFile, self).__init__(file_name, '.flac')
         
-    def open_player(self):
+    @staticmethod
+    def open_player():
         print('Opening iTunes')
         

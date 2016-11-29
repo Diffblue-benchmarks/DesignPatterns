@@ -6,9 +6,9 @@ Created on Nov 3, 2016
 class MSWindow:
     
     def __init__(self):       
-        print "I'm a MS window "
+        print("I'm a MS window")
         
 class MacOSXWindow:
     
     def __init__(self):       
-        print "I'm a MacOSx window "
+        print("I'm a MacOSx window")

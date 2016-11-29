@@ -13,6 +13,6 @@ class MediaPlayerClass:
     
     def play(self, title):
         if title.split('.')[1] in self._audio_extensions:
-            self._audio_player.playSong(title)
+            self._audio_player.play_song(title)
         else:
             print('Playing movie: ' + title)

@@ -10,9 +10,10 @@ class WidgetClass:
     
     def __init__(self, help_handler):
         self._help_handler = help_handler
-    
+
+    @staticmethod    
     @abstractmethod
-    def draw(self):
+    def draw():
         pass
     
     @abstractmethod
@@ -21,7 +22,8 @@ class WidgetClass:
     
 class PrintButton(WidgetClass):
     
-    def draw(self):
+    @staticmethod
+    def draw():
         print('Drawing a Print Button')
         
     def show_help(self):
@@ -29,7 +31,8 @@ class PrintButton(WidgetClass):
         
 class SaveButton(WidgetClass):
     
-    def draw(self):
+    @staticmethod
+    def draw():
         print('Drawing a Save Button')
         
     def show_help(self):
@@ -37,7 +40,8 @@ class SaveButton(WidgetClass):
         
 class GenericButton(WidgetClass):
     
-    def draw(self):
+    @staticmethod
+    def draw():
         print('Drawing a button')
         
     def show_help(self):

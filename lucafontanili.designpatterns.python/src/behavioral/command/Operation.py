@@ -7,16 +7,19 @@ from abc import abstractmethod
 
 class OperationClass(object):
     
+    @staticmethod
     @abstractmethod
-    def __do_operation(self):
+    def __do_operation():
         pass
     
-    def execute(self, do):
+    @staticmethod
+    def execute(do):
         do()
     
 class CopyOperation(OperationClass):
     
-    def __do_operation(self):
+    @staticmethod
+    def __do_operation():
         print('Copying file')
         
     def execute(self):
@@ -24,7 +27,8 @@ class CopyOperation(OperationClass):
         
 class AddOperation(OperationClass):
     
-    def __do_operation(self):
+    @staticmethod
+    def __do_operation():
         print('Creating new file')
         
     def execute(self):
