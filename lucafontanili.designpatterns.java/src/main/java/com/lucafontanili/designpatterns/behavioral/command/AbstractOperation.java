@@ -13,6 +13,8 @@ public abstract class AbstractOperation {
     }
 
     protected static class OperationExecutor {
+
+	@FunctionalInterface
 	public interface Command {
 	    public void doWork();
 	}

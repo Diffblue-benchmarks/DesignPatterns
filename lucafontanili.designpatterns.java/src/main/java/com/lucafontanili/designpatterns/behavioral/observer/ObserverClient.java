@@ -22,6 +22,7 @@ public class ObserverClient extends AbstractClient {
 		Thread.sleep(1000);
 	    } catch (InterruptedException e) {
 		LOGGER.error(new StringBuilder(32).append("Error during sleep"), e);
+		Thread.currentThread().interrupt();
 	    }
 	}
     }

@@ -9,6 +9,10 @@ public class ImageReader {
 
     private static final Logger LOGGER = Logger.getRootLogger();
 
+    private ImageReader() {
+
+    }
+
     public static FileInputStream readImage(String imageName) throws FileNotFoundException {
 	LOGGER.info(new StringBuilder(32).append("Reading image ").append(imageName));
 	try {

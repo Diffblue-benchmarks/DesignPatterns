@@ -12,11 +12,15 @@ public class ImageCompressor {
 
     private static final Logger LOGGER = Logger.getRootLogger();
 
+    private ImageCompressor() {
+
+    }
+
     public static void compressImage(FileInputStream image, String outputFile, String imageName) throws IOException {
 	LOGGER.info(new StringBuilder(16).append("Compressing image"));
 	byte[] buffer = new byte[1024];
 	try (ZipOutputStream out = new ZipOutputStream(new FileOutputStream(outputFile))) {
-	    ZipEntry entry = new ZipEntry(imageName.substring(imageName.lastIndexOf("/") + 1, imageName.length()));
+	    ZipEntry entry = new ZipEntry(imageName.substring(imageName.lastIndexOf('/') + 1, imageName.length()));
 	    out.putNextEntry(entry);
 	    int len;
 	    while ((len = image.read(buffer)) > 0) {

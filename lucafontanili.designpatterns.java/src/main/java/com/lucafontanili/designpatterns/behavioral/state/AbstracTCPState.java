@@ -12,6 +12,8 @@ public abstract class AbstracTCPState {
     }
 
     protected static class State {
+
+	@FunctionalInterface
 	public interface Command {
 	    public boolean doWork();
 	}

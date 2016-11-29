@@ -1,7 +1,7 @@
 package com.lucafontanili.designpatterns.behavioral.iterator;
 
 public class ProjectRepo implements ContainerInterface {
-    public String repoNames[] = { "WebServices", "Back-End", "Front-End", "Scripts" };
+    protected static final String[] REPO_NAMES = { "WebServices", "Back-End", "Front-End", "Scripts" };
 
     @Override
     public IteratorInterface getIterator() {
@@ -12,13 +12,10 @@ public class ProjectRepo implements ContainerInterface {
 
 	int index;
 
-	public RepoIterator() {
-	}
-
 	@Override
 	public boolean hasNext() {
 
-	    if (this.index < ProjectRepo.this.repoNames.length) {
+	    if (this.index < REPO_NAMES.length) {
 		return true;
 	    }
 	    return false;
@@ -28,7 +25,7 @@ public class ProjectRepo implements ContainerInterface {
 	public Object next() {
 
 	    if (this.hasNext()) {
-		return ProjectRepo.this.repoNames[this.index++];
+		return REPO_NAMES[this.index++];
 	    }
 	    return null;
 	}

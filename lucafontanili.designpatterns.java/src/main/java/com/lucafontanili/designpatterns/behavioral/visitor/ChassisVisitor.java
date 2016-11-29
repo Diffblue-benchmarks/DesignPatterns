@@ -13,7 +13,7 @@ public class ChassisVisitor extends AbstractEquipmentVisitor {
 
     @Override
     public void visitFloppyDisk(FloppyDiskEquipment floppyDisk) {
-
+	// unused method
     }
 
     @Override
